@@ -14,12 +14,12 @@ data={
     'KR': "안녕하세요! 오늘은 날씨가 정말 좋네요.",
 },
     "output_dir":"outputs",
-    "reference_speaker":"resources/source.mp3"
+    "reference_speaker":"resources/example_reference.mp3"
 }
 headers={
     'User-Agent': 'Mozilla/5.0 (Windows NT)',
 'Content-Type': 'application/json'
 }
-response=requests.post("http://127.0.0.1:8000/mdvoice",data=json.dumps(data),headers=headers)
+response=requests.post("http://127.0.0.1:8001/mdvoice",data=json.dumps(data),headers=headers)
 print(response.status_code)
 print(response.text)
